@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing my projects, skills, and experience as a Full Stack Developer.
 
-![Portfolio Preview](preview.png)
+![Portfolio Preview](https://personal-portfolio-z2gv.onrender.com/)
 
 ## Features
 
