@@ -37,7 +37,7 @@ export default function Contact() {
     {
       name: "WhatsApp",
       icon: MessageCircle,
-      href: "https://wa.me/919000057810",
+      href: "https://wa.me/919313217419",
       color: "bg-green-500 hover:bg-green-600",
       label: "+91 9313217419",
     },
