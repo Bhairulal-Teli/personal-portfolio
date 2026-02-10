@@ -115,7 +115,7 @@ npm run dev
 Feel free to reach out for collaborations or opportunities!
 
 - **Email:** bhairulal@example.com
-- **LinkedIn:** [linkedin.com/in/bhairulal](www.linkedin.com/in/bhairulal-teli-99749a375)
+- **LinkedIn:** [linkedin.com/in/bhairulal](https://linkedin.com/in/bhairulal)
 - **GitHub:** [github.com/Bhairulal-Teli](https://github.com/Bhairulal-Teli)
 - **WhatsApp:** +91-9313217419
 
