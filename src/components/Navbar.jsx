@@ -72,7 +72,7 @@ const Navbar = () => {
         >
           <div className="flex flex-col gap-3 p-4">
             <a
-              href="#about"
+              href="#home"
               className="text-base font-medium hover:opacity-70 py-2"
               onClick={() => setIsOpen(false)}
             >

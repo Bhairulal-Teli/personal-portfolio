@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import ProjectCard from "./ProjectCard";
+
 import Next_Hire1 from "../assets/NextHire-1.png";
 import Next_Hire2 from "../assets/NextHire-2.png";
 import Next_Hire3 from "../assets/NextHire-3.png";
@@ -26,9 +27,10 @@ const PortfolioSection = () => {
             tag="Full Stack"
             iconColor="bg-purple-600"
             bgColor="bg-purple-600"
-            description="NextHire is a full-stack platform for DSA practice and mock interviews. User can host or join sessions with real-time video, chat, and session tracking. Built with React, Tailwind, MongoDB, Clerk, Stream, and Inngest."
+            description="NextHire is a full-stack platform for DSA practice and mock interviews. Users can host or join sessions with real-time video, chat, and session tracking. Built with React, Tailwind, MongoDB, Clerk, Stream, and Inngest, NextHire gives desktop-optimized UI and robust backend functionality, providing a seamless experience for both learners and hosts."
             images={[Next_Hire1, Next_Hire2, Next_Hire3, Next_Hire4]} // Replace with 3 different images
             repo="https://github.com/Bhairulal-Teli/Next-Hire"
+            livePreview="https://next-hire-1-iyrt.onrender.com/"
           />
 
           {/* Project 2 - Vila Restaurant */}
@@ -37,9 +39,15 @@ const PortfolioSection = () => {
             tag="MERN Stack"
             iconColor="bg-yellow-400"
             bgColor="bg-blue-400"
-            description="ViLa is a full-stack web app for hotel staff to manage bookings and cabins. Staff can create, edit, and track reservations, check-in/out guests, and view dashboard insights. Built with React, Supabase, and styled with Tailwind CSS."
-            images={[Vila_Restaurant1, Vila_Restaurant2, Vila_Restaurant3, Vila_Restaurant4]} // Replace with 3 different images
+            description="ViLa is a full-stack web app for hotel staff to manage bookings and cabins. Staff can create, edit, and track reservations, check guests in and out, and view dashboard insights. Built with React, Supabase, and styled with Tailwind CSS, ViLa provides a smooth, desktop-optimized interface with efficient backend functionality."
+            images={[
+              Vila_Restaurant1,
+              Vila_Restaurant2,
+              Vila_Restaurant3,
+              Vila_Restaurant4,
+            ]} // Replace with 3 different images
             repo="https://github.com/Bhairulal-Teli/VILA_Restaurant"
+            livePreview="https://vilarestaurant.vercel.app/"
           />
         </div>
 
@@ -67,78 +75,6 @@ const PortfolioSection = () => {
         </div>
       </div>
     </section>
-  );
-};
-
-// Project Card Component
-const ProjectCard = ({ title, tag, iconColor, bgColor, description, images, repo }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
-        (prevIndex + 1) % images.length
-      );
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [images.length]);
-
-  return (
-    <div className="bg-white rounded-3xl border-4 border-black overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-      <div className="grid md:grid-cols-2">
-        <div className="p-6 md:p-9 order-1">
-          <div className="flex items-center gap-3 mb-4 md:mb-6">
-            <div className={`w-10 h-10 md:w-12 md:h-12 ${iconColor} rounded-full`}></div>
-            <h3 className="text-xl md:text-3xl font-bold">{title}</h3>
-          </div>
-          <div className="inline-block bg-black text-white px-3 md:px-4 py-1 md:py-2 rounded-full text-xs md:text-sm mb-4 md:mb-6">
-            {tag}
-          </div>
-          <p className="text-gray-600 text-sm md:text-base mb-6 md:mb-8">
-            {description}
-          </p>
-          <a
-            href={repo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black font-bold flex items-center gap-2 hover:gap-4 transition-all text-sm md:text-base"
-          >
-            View github repo →
-          </a>
-        </div>
-        
-        {/* Image Carousel Section */}
-        <div className={`${bgColor} p-6 md:p-4 flex items-center justify-center order-2`}>
-          <div className="relative w-full h-64 md:h-full overflow-hidden rounded-2xl border-4 md:border-6 border-black">
-            {images.map((image, index) => (
-              <img
-                key={index}
-                src={image}
-                alt={`${title} Screenshot ${index + 1}`}
-                className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 ${
-                  index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                }`}
-              />
-            ))}
-            
-            {/* Image Indicators */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
-              {images.map((_, index) => (
-                <div
-                  key={index}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === currentImageIndex 
-                      ? 'bg-white w-6' 
-                      : 'bg-white/50'
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 
