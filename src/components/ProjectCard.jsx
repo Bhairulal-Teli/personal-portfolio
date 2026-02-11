@@ -26,10 +26,10 @@ const ProjectCard = ({
         <div className="p-3 md:p-5 order-1">
           <div className="flex items-center gap-3 mb-4 md:mb-6">
             <div
-              className={`w-10 h-10 md:w-12 md:h-12 ${iconColor} rounded-full`}
+              className={`w-8 h-8 md:w-12 md:h-12 ${iconColor} rounded-full`}
             ></div>
             <h3 className="text-xl md:text-3xl font-bold">{title}</h3>
-            <div className="bg-gray-500 ml-2 text-white px-2 md:px-3 py-0.5 md:py-1 rounded-full text-xs md:text-sm">
+            <div className="bg-gray-500 text-white px-2 md:px-3 py-0.5 md:py-1 rounded-full text-xs md:text-sm">
               {tag}
             </div>
           </div>
@@ -42,17 +42,19 @@ const ProjectCard = ({
               href={repo}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-green-400 text-black px-4 py-2 rounded-xl font-bold text-sm flex items-center justify-center hover:bg-green-500 transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-y-0.5 lg:ml-10"
+              className="group bg-green-400 text-black px-4 py-2 rounded-xl font-bold text-sm flex items-center justify-center hover:bg-green-500 transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-y-0.5 lg:ml-10 ml-5"
             >
-              View github repo →
+              <span className="hidden sm:inline">View Github Repo →</span>
+              <span className="inline sm:hidden">GitHub →</span>
             </a>
             <a
               href={livePreview}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-red-500 text-white px-4 py-2 rounded-xl font-bold text-sm flex items-center justify-center hover:bg-red-600 transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-y-0.5 lg:mr-10"
+              className="group bg-red-500 text-white px-4 py-2 rounded-xl font-bold text-sm flex items-center justify-center hover:bg-red-600 transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-y-0.5 lg:mr-10 mr-5"
             >
-              Live Preview →
+              <span className="hidden sm:inline">Live Preview →</span>
+              <span className="inline sm:hidden">Live →</span>
             </a>
           </div>
         </div>

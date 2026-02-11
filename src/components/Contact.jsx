@@ -34,13 +34,6 @@ export default function Contact() {
       color: "bg-gray-800 hover:bg-gray-900",
       label: "github.com/Bhairulal-Teli",
     },
-    {
-      name: "WhatsApp",
-      icon: MessageCircle,
-      href: "https://wa.me/919313217419",
-      color: "bg-green-500 hover:bg-green-600",
-      label: "+91 9313217419",
-    },
   ];
   const [formData, setFormData] = useState({
     name: "",
@@ -140,7 +133,7 @@ export default function Contact() {
           <h3 className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8">
             Connect With <span className="bg-blue-500 text-white px-3">Me</span>
           </h3>
-          <div className="grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
+          <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
             {contactLinks.map((link, index) => {
               const IconComponent = link.icon;
               return (
